@@ -1,0 +1,293 @@
+:root {
+    --gm-color: -webkit-linear-gradient(45deg, rgb(224, 221, 12), rgb(199, 125, 14), rgb(175, 6, 175));
+}
+
+@font-face {
+    font-family: 'heyaugust';
+    src: url(/fonts/HeyAugust.ttf) format("truetype");
+}
+
+body{ 
+    color: white;
+    background-color: black;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+footer{
+    color: rgba(169, 169, 169, 0.5);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.content-wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    padding: 0px 12px;
+    font-size: 1.25rem;
+}
+
+.content > :not(:first-child) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.content > :first-child{
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.spotify-widget{
+    width: 100%;
+    height: 200px;
+}
+
+.spotify-widget-big{
+    width: 100%;
+    height: 40vh;
+    margin-top: 24px !important;
+    margin-bottom: 102px !important;
+}
+
+.media-header{
+    margin-top: 24px !important;
+}
+
+.media {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border-radius: 25px;
+    margin-bottom: 32px !important;
+    z-index: 0;
+}
+
+.new-release {
+    background: url(/images/tornado.JPG) no-repeat center;
+    background-size: cover;
+}
+
+.music-video {
+    background: url(/images/music_video.gif) no-repeat center;
+    background-size: cover;
+}
+
+.header-text{
+    font-size: 3rem;
+}
+
+.play-button-wrapper{
+    position: absolute;
+    width: 100%;
+    bottom: -48px;
+    left: 0;
+}
+
+.play-button{
+    font-size: 1.5rem !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .play-button{
+        font-size: 1.25rem !important;
+    }
+
+    .header-text{
+        font-size: 2rem;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0px 18px;
+    }
+}
+
+.gm-button {
+    padding: 12px 32px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
+    margin: 20px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    background-image: var(--gm-color);
+
+    border-radius: 25px;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.gm-button:hover {
+    background-position: 100% 0;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.gm-fancy-text {
+    font-family: heyaugust;
+}
+
+.youtube-video{
+    margin-top: 64px;
+    width: 80vw;
+    height: 80vh;
+}
+
+.menu-list-divider{
+    border-top: 3px solid rgba(255, 255, 255, 0.6);
+    padding: 0px 12px;
+}
+
+.menu-list-image{
+    height: 50vh;
+    margin: 64px 32px;
+}
+
+.menu-list-link{
+    text-decoration: none;
+    color: white;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-list-link-icon{
+    height: 36px;
+    padding: 0px 12px;
+}
+
+.close-button{
+    z-index: 100;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    height: 22px;
+    left: 16px;
+    top: 16px;
+    position: fixed;
+    opacity: 0.6;
+}
+
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.85); /* Black background with opacity */
+    z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    moz-transition: visibility 0s, opacity 0.3s linear;
+    -o-transition: visibility 0s, opacity 0.3s linear;
+    -webkit-transition: visibility 0s, opacity 0.3s linear;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+
+.overlay-visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.x-navbar {
+    background-color: transparent !important;
+    moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    z-index: 5;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 12px;
+}
+
+.x-navbar-fixed-top{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.x-navbar-brand {
+    font-size: 2.25rem;
+    background: var(--gm-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px 8px;
+}
+
+.x-navbar-link-icons{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 12px;
+    margin-left: 8px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.x-navbar-link-icon{
+    margin-right: 4px;
+}
+
+.x-navbar-link-icon > img {
+    width: 35px;
+    height: 35px;
+}
+
+.x-navbar-link-icon{
+    margin-right: 4px;
+}
+
+.x-navbar-link{
+    font-size: 1.25rem;
+    color:rgba(255, 255, 255, 0.85) !important;
+}
+
+.white-icon{
+    filter: brightness(0) invert(1);
+}
+
+.x-navbar.alt-color {
+    background-color: rgba(0,0,0,0.85) !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .x-navbar-link-icons{
+        flex-direction: row;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 0px;
+        flex-grow: 1;
+    }
+
+    .x-navbar-brand{
+        font-size: 2rem;
+    }
+
+    .x-navbar-link-icon > img {
+        width: 32px;
+        height: 32px;
+    }
+}
