@@ -23,18 +23,20 @@
         <div class="stars"></div>
         <div class="stars-twinkling"></div>
         <div class="content-wrapper">
+            <!--Nav Bar-->
             <div class="x-navbar-fixed-top">
                 <nav class="navbar navbar-dark bg-dark navbar-expand-md x-navbar">
                     <a href="#" class="navbar-brand x-navbar-brand gm-fancy-text"  onclick="checkUrl('#')">
-                        Seb the GM
+                        Seb The GM
                     </a>
                     <button class="navbar-toggler x-navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                         <span class="navbar-toggler-icon x-navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse" id="navbar">
                         <span class="x-navbar-link-icons">
-                            <a href="https://www.youtube.com/watch?v=B6rrI9f_XfY" class="external-link x-navbar-link-icon" target="_blank"><img src="images/youtube.png" hspace="3"></a>
                             <a href="https://open.spotify.com/artist/1VF2lfDZLcdm1EebSQ8pYi?si=bsmqxjiqR5Ww836UgZ3wKA&dl_branch=1" class="external-link x-navbar-link-icon" target="_blank"><img src="images/spotify.png" hspace="3"></a>
+                            <a href="https://music.apple.com/ca/artist/seb-the-gm/1550333693" class="external-link x-navbar-link-icon" target="_blank"><img src="images/apple_music_logo.png"></a>
+                            <a href="https://www.youtube.com/watch?v=B6rrI9f_XfY" class="external-link x-navbar-link-icon" target="_blank"><img src="images/youtube.png" hspace="3"></a>
                             <a href="https://soundcloud.com/seb_the_gm" class="external-link x-navbar-link-icon" target="_blank"><img src="images/soundcloud.png" hspace="3"></a>
                         </span>
                         <ul class="navbar-nav mr-auto">
@@ -71,13 +73,16 @@
                             <button class="gm-button play-button" onclick="showYoutube()">▶ Play</button>
                         </div>
                     </div>
-                    <iframe loading="lazy" src="https://open.spotify.com/embed/artist/1VF2lfDZLcdm1EebSQ8pYi" class="spotify-widget" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    
+                    <!--Overlay for youtube-->
                     <div class="overlay" id="youtubeview" onclick="hideYoutube()">
                         <img src="images/x.png" class="close-button" onclick="hideLinks()"/>
                         <div class="center">
                             <iframe class="youtube-video" src="https://www.youtube.com/embed/B6rrI9f_XfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
+
+                    <!--Overlay for tornado-->
                     <div class="overlay" id="linkview" onclick="hideLinks()">
                         <img src="images/x.png" class="close-button" onclick="hideLinks()"/>
                         <div class="center" style="align-content: center; text-align: center;">
@@ -99,14 +104,16 @@
                 
                 <!--############################## contact content ####################################-->
                 <div class="center content" id="#contact">
-                    <h1 class="gm-fancy-text header-text" style="margin: 64px 0px;">Contact The GM!</h1>
+                    <h1 class="gm-fancy-text header-text" style="margin: 64px 0px;">Contact Seb The GM!</h1>
                     <a class="gm-button" style="text-decoration: none; margin-bottom: 64px;" href="mailto:sebthegm@gmail.com">Email me</a>
                 </div>
 
                 <!--############################## music content ####################################-->
                 <div class="center content" id="#music">
                     <h1 class="gm-fancy-text header-text" style="margin-top: 12px;">Blast the tunes!</h1>
-                    <iframe loading="lazy" src="https://open.spotify.com/embed/artist/1VF2lfDZLcdm1EebSQ8pYi" class="spotify-widget-big" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe loading="lazy" src="https://open.spotify.com/embed/artist/1VF2lfDZLcdm1EebSQ8pYi" class="spotify" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" class="apple-music" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/playlist/seb-the-gm-discography/pl.u-e98lkxphZJm9GY"></iframe>
+                    <iframe class="soundcloud" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1309875436&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/seb_the_gm" title="Seb The GM" target="_blank" style="color: #cccccc; text-decoration: none;">Seb The GM</a> · <a href="https://soundcloud.com/seb_the_gm/sets/seb-the-gm-discography" title="Seb The GM Discography" target="_blank" style="color: #cccccc; text-decoration: none;">Seb The GM Discography</a></div>
                 </div>
             </main>   
             <footer>
